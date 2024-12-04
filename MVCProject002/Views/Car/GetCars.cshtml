@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Car>
+
+<a asp-action="AddCar">Create new car</a>
+
+<h1>Cars</h1>
+
+@foreach (var car in Model)
+{
+    <div>
+        <p>@car.Name</p>
+        <p>@car.Color</p>
+        <p>@car.Price</p>
+    </div>
+    <br/>
+    <br/>
+}
