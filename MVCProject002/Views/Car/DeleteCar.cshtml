@@ -1,0 +1,12 @@
+﻿@model Car
+
+<h2>Are you sure you want to delete this car?</h2>
+<p>@Model.Name</p><br/>
+<p>@Model.Color</p><br/>
+<p>@Model.Price</p><br/>
+
+<form method="post">
+    <input type="hidden" asp-for="Id"/>
+    <a asp-action="GetCars">Cancel</a>
+    <input class="btn btn-danger" type="submit" value="Delete"/>
+</form>

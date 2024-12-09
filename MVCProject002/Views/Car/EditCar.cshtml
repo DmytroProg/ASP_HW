@@ -1,0 +1,18 @@
+﻿@model Car
+
+<form method="post">
+    <input type="hidden" asp-for="Id"/>
+
+    <label>Name: </label>
+    <input type="text" name="name" asp-for="Name" />
+
+    <label>Price: </label>
+    <input type="number" name="price" asp-for="Price" />
+
+    <label>Color: </label>
+    <input type="text" name="color" asp-for="Color" />
+
+    <input class="btn btn-warning" type="submit" value="Edit"/>
+</form>
+<br/>
+<a asp-action="GetCars">Go back</a>

@@ -29,8 +29,7 @@ public class CarDatabase : IDatabase<Car>
 
     public void Update(Car oldCar, Car newCar)
     {
-        Car car = _cars.First(x => x.Id == oldCar.Id);
-
-        car = newCar;
+        int index = _cars.FindIndex(x => x.Id == oldCar.Id);
+        _cars[index] = newCar;
     }
 }
